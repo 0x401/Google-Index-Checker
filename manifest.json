@@ -1,7 +1,7 @@
 {
   "name": "Index Checker",
   "description": "Index Checker",
-  "version": "0.2",
+  "version": "0.3",
   "manifest_version": 2,
     "permissions": [
     "webview",{"fileSystem":["write"]},"http://ip-api.com/json","notifications"
