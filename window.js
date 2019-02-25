@@ -16,6 +16,12 @@ function importTxt() {
 	},
 		function (fileEntry) {
 			if (!fileEntry) { return; }
+			total = 0;
+			indexed = 0;
+			unIndexed =0;
+			$("#total").text("--");
+			$("#indexed").text("--");
+			$("#unIndexed").text("--");
 			fileEntry.file(function (file) {
 				var reader = new FileReader();
 				reader.onload = function (e) {
