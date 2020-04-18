@@ -1,14 +1,9 @@
 {
-  "name": "Index Checker",
+  "name": "Google Index Checker",
   "description": "Index Checker",
   "version": "0.3",
   "manifest_version": 2,
-    "permissions": [
-    "webview",{"fileSystem":["write"]},"http://ip-api.com/json","notifications"
-  ],
-  "app": {
-    "background": {
-      "scripts": ["background.js"]
-    }
-  }
+  "permissions": ["tabs","storage"],
+  "options_page": "options.html",
+  "content_scripts": [{"matches": ["https://www.google.com/*"],"js": ["inject.js"],"run_at":"document_end","all_frames":true}]
 }

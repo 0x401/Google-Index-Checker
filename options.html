@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="bulma.min.css">
+  <title>Index Checker 0.2</title>
+  <style>
+    div#nav {
+      margin: 5px  0;  
+    }
+ 
+ #list{
+   margin-top:40px;
+ }
+
+    .url {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 500px;
+      max-width: 500px;
+
+      user-select: text;
+    }
+
+    td.status {
+      border-color: #dbdbdb !important;
+    }
+
+    td.is-success,
+    td.is-warning,
+    td.is-danger {
+      border-color: unset;
+    }
+
+ 
+ 
+      #baseUrl{width: 220px;}
+    .info {
+      
+      display: flex;
+    }
+
+    .info .tags {
+      margin: 0 10px 0 0;
+    }
+    #file{display:none;}
+  </style>
+</head>
+
+<body>
+<div class="container">
+  <div id="nav" class="field is-grouped">
+    <div class="field has-addons btns">
+      <div class="control"><input id="import" class="button" type="button" value="Import"></div>
+      <div class="control"><input id="check" class="button is-primary is-outlined" value="Check" type="button"></div>
+      <div class="control"><input id="export" class="button " value="Export" type="button"></div>
+      <input type="file" id="file" accept=".txt">
+    </div>
+    <div class="field has-addons baseUrl">
+      <p class="control"><a class="button is-static">Base URL</a></p>
+      <p class="control"><input id="baseUrl" class="input" value="https://www.hotdeals.com"></p>
+    </div>
+
+
+  </div>
+
+  <div class="side">
+ 
+    <div class="info">
+      <div class="tags has-addons"><span class="tag is-dark" ">Location</span><span class=" tag is-info"
+          id="location">--</span></div>
+      <div class="tags has-addons"><span class="tag is-dark">Total</span><span class="tag is-info" id="total">--</span>
+      </div>
+      <div class="tags has-addons"><span class="tag is-dark">Indexed</span><span class="tag is-primary"
+          id="indexed">--</span></div>
+      <div class="tags has-addons"><span class="tag is-dark">Not indexed</span><span class="tag is-danger"
+          id="unIndexed">--</span></div>
+    
+     <span class="tag is-light" id="tip">s</span>
+    </div>
+  </div>
+     <table id="list" class="table is-bordered is-narrow is-hoverable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th class="url">URL</th>
+        <th>Indexed</th>
+        <!--<th>Page</th>-->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr ><td>##</td><td class="url">Import txt file contain urls.</td><td class="status"></td> -->
+    </tbody>
+     
+ </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="background.js"></script>
+</body>
+
+
+</html>
