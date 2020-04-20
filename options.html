@@ -52,16 +52,17 @@
 <body>
 <div class="container">
   <div id="nav" class="field is-grouped">
-    <div class="field has-addons btns">
-      <div class="control"><input id="import" class="button" type="button" value="Import"></div>
-      <div class="control"><input id="check" class="button is-primary is-outlined" value="Check" type="button"></div>
-      <div class="control"><input id="export" class="button " value="Export" type="button"></div>
-      <input type="file" id="file" accept=".txt">
-    </div>
     <div class="field has-addons baseUrl">
       <p class="control"><a class="button is-static">Base URL</a></p>
       <p class="control"><input id="baseUrl" class="input" value="https://www.hotdeals.com"></p>
     </div>
+    <div class="field has-addons btns">
+      <div class="control"><input id="import" class="button" type="button" value="Import"></div>
+      <div class="control"><input id="check" class="button is-primary is-outlined" value="Check" type="button"></div>
+      <input type="file" id="file" accept=".txt">
+      <div class="control"><input id="export" class="button" value="Export" type="button"></div>
+    </div>
+
 
 
   </div>
@@ -69,7 +70,7 @@
   <div class="side">
  
     <div class="info">
-      <div class="tags has-addons"><span class="tag is-dark" ">Location</span><span class=" tag is-info"
+      <div class="tags has-addons"><span class="tag is-dark">Location</span><span class=" tag is-info"
           id="location">--</span></div>
       <div class="tags has-addons"><span class="tag is-dark">Total</span><span class="tag is-info" id="total">--</span>
       </div>
@@ -87,13 +88,10 @@
         <th>#</th>
         <th class="url">URL</th>
         <th>Indexed</th>
-        <!--<th>Page</th>-->
       </tr>
     </thead>
     <tbody>
-      <!-- <tr ><td>##</td><td class="url">Import txt file contain urls.</td><td class="status"></td> -->
     </tbody>
-     
  </div>
 
   <script src="jquery.min.js"></script>
